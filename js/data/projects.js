@@ -17,6 +17,19 @@ const projectsData = [
     gradient: "from-[#2B44D1] to-[#435EF0]"
   },
   {
+    id: "harmful-gas-detector",
+    title: "Harmful Gas Detector",
+    category: "IoT & Hardware",
+    featured: true,
+    badge: "Hardware & IoT",
+    shortDescription: "An intelligent harmful gas detection and alert system engineered to monitor hazardous atmospheric gases (such as LPG, smoke, CO, and toxic fumes) in real-time with automated sensor thresholds and alert triggers.",
+    technologies: ["IoT / Microcontroller", "MQ Gas Sensors", "Python / C++", "Hardware Interfacing", "Safety Automation"],
+    githubUrl: "https://github.com/cyberidfc9/HARMFUL-GAS-DETECTER",
+    liveUrl: "https://github.com/cyberidfc9/HARMFUL-GAS-DETECTER",
+    metrics: "Real-time Telemetry • Automatic Hazard Alert",
+    gradient: "from-[#10B981] to-[#3B82F6]"
+  },
+  {
     id: "student-portal",
     title: "IT Student Attendance & Academic Portal",
     category: "Full Stack / Python",
