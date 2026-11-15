@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujal Patel | IT Student & Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Sujal Patel - Final Year Diploma in Information Technology student, web developer, and tech enthusiast specializing in modern web interfaces, Python, and frontend engineering.">
+  <meta name="keywords" content="Sujal Patel, Sujal Patel Portfolio, Diploma IT, Web Developer, Frontend Developer, Python, JavaScript, HTML, CSS, Ahmedabad, Gujarat">
+  <meta name="author" content="Sujal Patel">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sujal Patel | IT Student & Web Developer Portfolio">
+  <meta property="og:description" content="Modern, interactive personal portfolio of Sujal Patel showcasing web development projects, technical skills, and educational background.">
+  <meta property="og:url" content="https://github.com/sujalpatel2728/sujalportfolio">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sujal Patel | IT Student & Web Developer Portfolio">
+  <meta name="twitter:description" content="Explore Sujal Patel's technical projects, skills in JavaScript, Python, and modern web development.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Neuform Dark Theme Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Cursor Spotlight Layer (Active on Desktop) -->
+  <div id="cursor-spotlight" aria-hidden="true"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-notification" role="alert" aria-live="polite">
+    <svg style="width: 20px; height: 20px; color: #10B981;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- =========================================================================
+       Navigation Bar (Section 1.5)
+       ========================================================================= -->
+  <header class="navbar-header" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="navbar-brand" aria-label="Sujal Patel Home">
+        <div class="navbar-brand-badge">SP</div>
+        <span>Sujal Patel</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="navbar-links">
+          <li><a href="#hero" class="navbar-link active">Home</a></li>
+          <li><a href="#about" class="navbar-link">About</a></li>
+          <li><a href="#skills" class="navbar-link">Skills</a></li>
+          <li><a href="#projects" class="navbar-link">Projects</a></li>
+          <li><a href="#education" class="navbar-link">Education</a></li>
+          <li><a href="#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA & Mobile Toggle -->
+      <div class="navbar-actions">
+        <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;">
+          Let's Talk
+          <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="mobile-backdrop" class="mobile-drawer-backdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside id="mobile-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="navbar-brand">
+          <div class="navbar-brand-badge">SP</div>
+          <span>Sujal Patel</span>
+        </div>
+        <button id="drawer-close" class="btn-icon" aria-label="Close menu" style="width: 36px; height: 36px;">
+          <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="padding-top: 24px; border-top: 1px solid var(--color-border);">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
+      <div style="margin-top: 16px; font-size: 0.75rem; color: var(--color-text-muted); text-align: center;">
+        Diploma in IT • Final Year
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       Hero Section (Section 1.6 & 2.9)
+       ========================================================================= -->
+  <section id="hero" class="hero-section">
+    <!-- Interactive Background Canvas (Particles & Cursor Reaction) -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <div class="container hero-content">
+      <!-- Status Pill -->
+      <div class="hero-status-pill fade-up">
+        <span class="indicator-dot"></span>
+        <span class="text-mono" style="color: #CCD9FF;">DIPLOMA IT STUDENT • FINAL YEAR</span>
+      </div>
+
+      <!-- Main Display Heading -->
+      <h1 class="hero-main-title fade-up">
+        Hi, I'm <span class="text-gradient">Sujal Patel</span>.
+      </h1>
+
+      <!-- Interactive Subtitle / Tagline -->
+      <div class="hero-interactive-tagline fade-up">
+        <svg style="width: 20px; height: 20px; color: var(--color-secondary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>Don't just scroll. Explore my work.</span>
+      </div>
+
+      <!-- Hero Description -->
+      <p class="hero-description fade-up">
+        A final-year Diploma in Information Technology student passionate about software engineering, 
+        modern web development, and crafting responsive, interactive digital experiences with clean code and modern aesthetics.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="hero-cta-group fade-up">
+        <a href="#projects" class="btn btn-primary">
+          <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          View My Work
+        </a>
+
+        <a href="#contact" class="btn btn-secondary">
+          <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Contact Me
+        </a>
+
+        <a href="https://github.com/sujalpatel2728" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Sujal Patel GitHub">
+          <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Feature Pill Badges -->
+      <div class="hero-badges-row fade-up">
+        <div class="hero-badge-item">
+          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Available for Internships & Junior Roles
+        </div>
+        <div class="hero-badge-item">
+          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+          Python & Web Technologies
+        </div>
+        <div class="hero-badge-item">
+          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="3" x2="21" y1="9" y2="9"/></svg>
+          Neuform Dark Theme
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       About Section (Section 1.7)
+       ========================================================================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag"><span class="pulse-dot"></span> ABOUT ME</span>
+        <h2 class="section-title">Driven by Curiosity, Built with Code</h2>
+        <p class="section-subtitle">
+          Bridging technical fundamentals with modern web engineering to build clean, intuitive digital solutions.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Bio & Story Card -->
+        <div class="neu-card about-bio-card fade-up">
+          <div>
+            <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; color: #FFFFFF;">
+              Hello, I'm Sujal Patel.
+            </h3>
+            <p class="about-text">
+              I am a final-year <strong>Diploma in Information Technology</strong> student with an active passion for building web applications and understanding core computing principles. My journey into tech is driven by hands-on experimentation, turning ideas into interactive digital experiences.
+            </p>
+            <p class="about-text">
+              I specialize in frontend development using <strong>HTML5, CSS3, and modern JavaScript (ES6+)</strong>, alongside programming in <strong>Python</strong> and working with version control using <strong>Git & GitHub</strong>. I prioritize readable code, responsive layouts, and user-centric designs.
+            </p>
+          </div>
+
+          <!-- Highlight Boxes -->
+          <div class="about-highlights-list">
+            <div class="about-highlight-box">
+              <div class="hl-title">ACADEMIC STATUS</div>
+              <div class="hl-value">Final Year Diploma IT</div>
+            </div>
+            <div class="about-highlight-box">
+              <div class="hl-title">CORE FOCUS</div>
+              <div class="hl-value">Web Dev & Python</div>
+            </div>
+            <div class="about-highlight-box">
+              <div class="hl-title">LOCATION</div>
+              <div class="hl-value">Gujarat, India</div>
+            </div>
+            <div class="about-highlight-box">
+              <div class="hl-title">OPEN TO</div>
+              <div class="hl-value">Internships & Projects</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Animated Stats / Value Cards -->
+        <div class="about-stats-column">
+          <div class="neu-card stat-card fade-up">
+            <div class="stat-icon-wrap">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">Final Year</div>
+              <div class="stat-label">Diploma in Information Technology</div>
+            </div>
+          </div>
+
+          <div class="neu-card stat-card fade-up">
+            <div class="stat-icon-wrap">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Commitment to Clean & Responsive Code</div>
+            </div>
+          </div>
+
+          <div class="neu-card stat-card fade-up">
+            <div class="stat-icon-wrap">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">Always</div>
+              <div class="stat-label">Learning & Adapting New Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Skills Section (Section 1.8)
+       ========================================================================= -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag"><span class="pulse-dot"></span> TECHNICAL ARSENAL</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">
+          A clear breakdown of my programming languages, frameworks, developer tooling, and engineering workflows.
+        </p>
+      </div>
+
+      <!-- Dynamically Rendered from js/data/skills.js -->
+      <div id="skills-container" class="skills-categories-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Projects Section (Section 1.9)
+       ========================================================================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag"><span class="pulse-dot"></span> PORTFOLIO SHOWCASE</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Real-world applications and academic projects demonstrating architecture, UI design, and problem solving.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="projects-filter-bar fade-up">
+        <button class="filter-btn active" onclick="filterProjects('All', this)">All Projects</button>
+        <button class="filter-btn" onclick="filterProjects('Web Development', this)">Web Development</button>
+        <button class="filter-btn" onclick="filterProjects('Full Stack / Python', this)">Python & Backend</button>
+        <button class="filter-btn" onclick="filterProjects('Tools & Utilities', this)">Tools & Utilities</button>
+      </div>
+
+      <!-- Dynamically Rendered from js/data/projects.js -->
+      <div id="projects-container" class="projects-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Education Section (Section 1.10)
+       ========================================================================= -->
+  <section id="education" class="section">
+    <div class="container education-container">
+      <div class="section-header fade-up">
+        <span class="section-tag"><span class="pulse-dot"></span> ACADEMIC BACKGROUND</span>
+        <h2 class="section-title">Education Journey</h2>
+        <p class="section-subtitle">
+          Foundational IT education covering computing theory, data structures, network systems, and application development.
+        </p>
+      </div>
+
+      <!-- Timeline Card -->
+      <div class="neu-card timeline-card fade-up">
+        <div class="timeline-badge-row">
+          <span class="timeline-year">2023 — Present</span>
+          <span class="timeline-status">
+            <span class="status-dot"></span> Currently Pursuing (Final Year)
+          </span>
+        </div>
+
+        <h3 class="edu-title">Diploma in Information Technology</h3>
+        <div class="edu-subtitle">Final Year Student • IT Engineering Department</div>
+        <p class="edu-description">
+          Rigorous curriculum structured around computer software architecture, object-oriented programming, relational databases, web development standards, and systems engineering. Participating in technical laboratories, practical assignments, and team capstone projects.
+        </p>
+
+        <h4 style="font-size: 0.9375rem; font-family: var(--font-mono); color: #CCD9FF; margin-bottom: 12px; text-transform: uppercase;">
+          Key Coursework & Competencies
+        </h4>
+
+        <div class="edu-coursework-grid">
+          <div class="course-item">
+            <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Web Development & Scripting
+          </div>
+          <div class="course-item">
+            <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Python Programming
+          </div>
+          <div class="course-item">
+            <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Database Management (DBMS)
+          </div>
+          <div class="course-item">
+            <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Software Engineering & Testing
+          </div>
+          <div class="course-item">
+            <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Computer Networks & Security
+          </div>
+          <div class="course-item">
+            <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Operating Systems & CLI
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Contact Section (Section 1.11)
+       ========================================================================= -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag"><span class="pulse-dot"></span> GET IN TOUCH</span>
+        <h2 class="section-title">Let's Connect & Collaborate</h2>
+        <p class="section-subtitle">
+          Have an internship opportunity, freelance project, or technical question? Feel free to reach out directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Information -->
+        <div class="neu-card contact-info-card fade-up">
+          <div>
+            <h3 class="contact-info-title">Contact Information</h3>
+            <p class="contact-info-desc">
+              I am actively looking for internship roles, developer opportunities, and tech collaborations. Reach out via email, phone, or message!
+            </p>
+          </div>
+
+          <div class="contact-methods-list">
+            <!-- Email -->
+            <div class="contact-method-item">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-method-meta">
+                  <div class="label">EMAIL ADDRESS</div>
+                  <a href="mailto:sujalchaudhary271@gmail.com" class="val">sujalchaudhary271@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="sujalchaudhary271@gmail.com" title="Copy Email">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-method-item">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-method-meta">
+                  <div class="label">PHONE / WHATSAPP</div>
+                  <a href="tel:+919328373321" class="val">+91 9328373321</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="9328373321" title="Copy Phone Number">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-method-item">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </div>
+                <div class="contact-method-meta">
+                  <div class="label">GITHUB PROFILE</div>
+                  <a href="https://github.com/sujalpatel2728" target="_blank" rel="noopener noreferrer" class="val">github.com/sujalpatel2728</a>
+                </div>
+              </div>
+              <a href="https://github.com/sujalpatel2728" target="_blank" rel="noopener noreferrer" class="copy-btn" title="Open GitHub">
+                Open
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Form -->
+        <div class="neu-card contact-form-card fade-up">
+          <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 8px; color: #FFFFFF;">Send a Direct Message</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; margin-bottom: 24px;">
+            Fill out the form below to initiate contact. All submissions are processed instantly.
+          </p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">FULL NAME *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+              <span class="field-error-msg">Please enter your name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">EMAIL ADDRESS *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="name@company.com" required>
+              <span class="field-error-msg">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">SUBJECT</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Internship Opportunity / Project Inquiry">
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">MESSAGE *</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Hello Sujal, I came across your portfolio and would like to connect regarding..." required></textarea>
+              <span class="field-error-msg">Message must be at least 10 characters long.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              Send Message
+            </button>
+
+            <div id="form-status-alert" class="form-status-alert" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Footer (Section 1.12)
+       ========================================================================= -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="navbar-brand" style="margin-bottom: 12px;">
+            <div class="navbar-brand-badge">SP</div>
+            <span>Sujal Patel</span>
+          </div>
+          <p class="footer-brand-desc">
+            Final Year Diploma in Information Technology student passionate about software engineering, frontend technologies, and building clean web products.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect & Social</div>
+          <ul class="footer-links-list">
+            <li><a href="https://github.com/sujalpatel2728" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a></li>
+            <li><a href="mailto:sujalchaudhary271@gmail.com" class="footer-link">Email Sujal</a></li>
+            <li><a href="tel:+919328373321" class="footer-link">+91 9328373321</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>© 2026 Sujal Patel. All rights reserved.</div>
+        <div>Designed with Neuform Dark Aesthetics</div>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+          Back to Top
+          <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/skills.js"></script>
+  <script src="js/data/projects.js"></script>
+  <script src="js/components/hero-canvas.js"></script>
+  <script src="js/components/navigation.js"></script>
+  <script src="js/components/contact-form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
